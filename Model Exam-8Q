@@ -1,0 +1,37 @@
+import java.util.Scanner;
+class bank 
+{
+	public static void main(String[] args) 
+	{
+		Scanner s=new Scanner(System.in);
+		System.out.print("enter the amount");
+		int a=s.nextInt();
+		System.out.print("enter the bank");
+		String b=s.nextLine();
+		char c=s.next().charAt(0);
+		double intrest=0;
+		if(c=='S')
+		{
+			intrest=(a*0.84);
+			System.out.print("the SBI amount"+intrest);
+		}
+		else if(c=='I')
+		{
+			intrest=(a*0.73);
+			System.out.print("the ICICI amount"+intrest);
+
+		}
+		else if(c=='A')
+		{
+			intrest=(a*0.97);
+			System.out.print("the AXIS amount"+intrest);
+		}
+		else
+		{
+			System.out.print("enter the name correstly");
+		}
+		s.close();
+
+
+	}
+}
