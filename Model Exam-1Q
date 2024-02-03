@@ -1,0 +1,47 @@
+import java.util.Scanner;
+class matrix 
+{
+	public static void main(String[] args) 
+	{
+		Scanner s=new Scanner(System.in);
+		System.out.print("enter the size of the matrix 1");
+		int a=s.nextInt();
+		System.out.print("enter the size of the matrix 2");
+		int b=s.nextInt();
+		int mat1[][]=new int[a][b];
+		int mat2[][]=new int[a][b];
+		int sum_mat[][]=new int[a][b];
+		System.out.println("enter the elements of matrix 1");
+		for(int i=0;i<a;i++)
+		{
+			for(int j=0;j<b;j++)
+			{
+				mat1[i][j]=s.nextInt();
+			}
+		}
+		System.out.println("enter the elements of matrix 2");
+		for(int i=0;i<a;i++)
+		{
+			for(int j=0;j<b;j++)
+			{
+				mat2[i][j]=s.nextInt();
+			}
+		}
+		for(int i=0;i<a;i++)
+		{
+			for(int j=0;j<b;j++)
+			{
+				 sum_mat[i][j]=0;
+				for(int k=0;k<b;k++)
+				{
+					sum_mat[i][j]=sum_mat[i][j]+(mat1[i][k]*mat2[k][j]);
+					
+			}
+			System.out.print(sum_mat[i][j]+ "\t");
+			
+		}
+		System.out.println();
+			s.close();
+	}
+}
+}
